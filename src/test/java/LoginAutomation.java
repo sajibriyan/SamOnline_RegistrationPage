@@ -66,6 +66,7 @@ public class LoginAutomation {
         //Logout
         driver.findElement(By.xpath("//a[@class='logout-link'][contains(.,'Log out')]")).click();
 
+
     }
 }
 
