@@ -54,6 +54,11 @@ public class LoginAutomation {
         toClear.sendKeys("Rakib Al Torzu");
         Thread.sleep(3000);
 
+        //Upload Picture
+        WebElement UploadImg = driver.findElement(By.xpath("//input[contains(@type,'file')]"));
+        UploadImg.sendKeys("C:\\Users\\User\\Desktop\\New folder\\mypic.jpg");
+        Thread.sleep(5000);
+
         JavascriptExecutor jE = (JavascriptExecutor) driver;
         jE.executeScript("window.scrollBy(0,700)", "");
         Thread.sleep(4000);
@@ -65,7 +70,6 @@ public class LoginAutomation {
 
         //Logout
         driver.findElement(By.xpath("//a[@class='logout-link'][contains(.,'Log out')]")).click();
-
 
     }
 }
